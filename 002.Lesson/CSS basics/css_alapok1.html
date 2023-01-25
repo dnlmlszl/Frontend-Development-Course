@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc </title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            width: 100vw;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            font-size: 2rem;
+        }
+        .tartalom {
+            /* height: 100vh; */
+            height: calc(100vh - 100px);
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        Ez a navbar...
+    </nav>
+    <div class="tartalom"></div>
+</body>
+</html>

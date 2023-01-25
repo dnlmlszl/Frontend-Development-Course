@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Basics</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="This is the first lesson of a Frontend Developer Course"
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Frontend Developer Course" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.yourwebsite.com/frontend-developer-course"
+    />
+    <meta
+      property="og:image"
+      content="https://www.yourwebsite.com/images/frontend-developer-course.jpg"
+    />
+    <meta
+      property="og:description"
+      content="Learn the basics of web development as a junior frontend developer with this comprehensive course. Join now and start building your skills."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: Poppins, sans-serif;
+      }
+      p {
+        border: 1px solid #333;
+        padding: 0.5em;
+      }
+
+      .kiemel {
+        font-size: 1.5rem;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: #777">Reszponzív weboldal</h1>
+    <p>
+      A reszponzív weboldal (RWD) egy olyan megközelítéssel tervezett weboldal,
+      amelynek a célja az, hogy optimális megjelenést biztosítson - könnyű
+      olvashatóság, egyszerű navigáció a lehető legkevesebb átméretezéssel és
+      görgetéssel - a legkülönfélébb eszközökön (az asztali számítógép
+      monitorjától egészen a mobiltelefonokig). Egy reszponzív elv alapján
+      tervezett oldal tökéletesen igazodik a megjelenítő eszközhöz, mindezt
+      rugalmas felépítéssel, flexibilis képekkel. A CSS3 media query (a @media
+      szabály egy kiterjesztése) segít nekünk definiálni egy ilyen weboldal
+      stíluslapját, követve az alábbiakat: A rugalmas felosztású koncepció
+      alapján a honlap minden elemének mérete százalékosan, relatívan van
+      meghatározva. A flexibilis képek úgyszintén a befoglaló elemhez képest,
+      százalékosan határozódnak meg. A media query alkalmazásával
+      megvalósíthatjuk, hogy a weboldalon mindig olyan CSS szabályok lépjenek
+      érvénybe, amelyek a megjelenítő eszközön optimálisak.
+    </p>
+    <h2>Mobile first</h2>
+    <p class="kiemel">
+      Magyarul: először a mobil, tehát a fejlesztést megelőző tervezés menete
+      megfordul. A hagyományos tervezés az asztali számítógép monitorméretein
+      alapszik, szóval a "régi" világ tervezői, designerei számára ez a
+      legkényelmesebb felület. Miután elkészültek a széles eszközökön jól mutató
+      tervek, elkezdődik annak az eggyel kisebb méretű (tipikusan tablet)
+      eszközökre való adaptálása, míg el nem jutunk a legkisebb méretig. Addigra
+      a terveink zsúfoltak, átláthatatlanok lesznek, mivel ami elfér egy
+      számítógép monitorán, sajnos nehezen fér el kompromisszumok nélkül egy
+      zsebméretű telefon kijelzőjén. A megoldás tehát az, hogy a tervezést a
+      legkisebb céleszközre kezdjük, és úgy haladunk folyamatosan az egyre
+      nagyobb kijelzőméretek felé. Az eredmény egy gyorsan betöltődő és működő,
+      mobilon internetező felhasználók számára kényelmes weboldal. Ez különösen
+      fontos, hiszen a telefonok erőforrásai azért még le vannak maradva az
+      asztali számítógépekétől, ráadásul a mobilinternet sem szállhat versenybe
+      mindenkinél a bekötött vezetékessel szemben.
+    </p>
+    <h2>Progressive enhancement</h2>
+    <p>
+      Magyarul: folyamatos növelés, tehát attól függően, hogy milyen eszköz,
+      illetve sávszélesség áll rendelkezésre, más és más megjelenítéssel áll elő
+      ugyanaz a tartalom. A lényeg az, hogy a szöveges vagy képi tartalmi
+      részekből minden látogató ugyanazt kapja, de mindenkinek úgy tálaljuk azt,
+      ahogy azt a körülmények megengedik. Nevezhetnénk Content First
+      szemléletnek is, mert lényegében arról van szó, hogy minden más
+      weboldalelem a tartalomnak van alárendelve. Ez fontos, hiszen a weboldalak
+      elsősorban információátadás céljából készülnek. A látványos részek
+      háttérbe szorulnak, illetve csak akkor kerülnek képbe, ha az adott eszköz,
+      illetve elérhető internetsebesség mellett a tartalom prezentálása
+      zökkenőmentes.
+    </p>
+  </body>
+</html>
