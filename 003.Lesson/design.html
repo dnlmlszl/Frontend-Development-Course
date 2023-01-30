@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design || Opacity || Transparency</title>
+</head>
+<style>
+    .content {
+        max-width: 800px;
+        border: 1px solid greenyellow;
+        margin: 0 auto;
+        text-align: center;
+        background-color: rgba(0, 128, 0, .3); /* ez lenne az áttetszőség */
+        color: #444;
+        /* background-color: rgb(0, 128, 0);
+        opacity: 60%; */
+    }
+
+    figure {
+        background-color: rgba(0, 128, 0, .6);
+        padding: 1.5em;
+    }
+
+    figcaption {
+        background-color: rgba(0, 128, 0, .9);
+        padding: 1.5em;
+        margin: 0.5em;
+        font-weight: bold;
+        font-size: 1.75rem;
+    }
+
+    img {
+        border-radius: 0.5rem;
+    }
+
+</style>
+<body>
+    <div class="content">
+        <h1>Figure tag, block elemek középre helyezése, áttetszőség beállítása</h1>
+        <figure>
+            <img src="https://picsum.photos/id/102/400" alt="málna" />
+            <figcaption>Málna szemek</figcaption>
+        </figure>
+    </div>
+</body>
+</html>

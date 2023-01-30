@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Űrlap</title>
+    <style>
+        form {
+            margin: 0 auto;
+            max-width: 500px;
+            border: 1px solid darkblue;
+        }
+        label[for="feedback"] {
+            display: block;
+            margin-bottom: 1em;
+        }
+        fieldset {
+            background-color: #cacdd0;
+            margin: 0.5em;
+            padding: 0.5em;
+        }
+        #name, #email, #password, #age, #feedback, #submit {
+            width: 100%;
+        }
+        #submit {
+            margin-top: 2em;
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Személyes adatok</legend>
+            <div>
+                <label for="name">Név:</label>
+                <input type="text" id="name" placeholder="Felhasználó név" required />
+            </div>
+            <div>
+                <label for="password">Jelszó</label>
+                <input type="password" id="password" required />
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Email" required />
+            </div>
+            <div>
+                <label for="age">Születési dátum:</label>
+                <input type="date" id="age" />
+            </div>
+        </fieldset>
+            <div>
+                <p>A Te értékelésed:</p>
+                <input type="range" id="range" min="1" max="10" value="5" />
+            </div>
+            <fieldset class="language">
+                <legend>Nyelvtudás</legend>
+                <div>
+                    <input type="checkbox" name="language" id="hu" value="hu" checked />
+                    <label name="hu">Magyar</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="language" id="en" value="en" />
+                    <label name="en">Angol</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="language" id="de" value="de" />
+                    <label name="de">Német</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="language" id="fr" value="fr" />
+                    <label name="fr">Francia</label>
+                </div>
+            </fieldset>
+            <fieldset class="radio">
+                <legend>Legmagasabb Iskolai Végzettség</legend>
+                <div>
+                    <input type="radio" name="edu" id="alap" value="alap" />
+                    <label for="alap">Alapképzés</label>
+                <div>
+                    <input type="radio" name="edu" id="közép" value="közép" checked />
+                    <label for="közép">Középfokú</label>
+                <div>
+                    <input type="radio" name="edu" id="felső" value="felső" />
+                    <label for="felső">Felsőfokú</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Dropdown</legend>
+                <label for="op">Válassz ágazatot</label>
+                <select name="dropd" id="op">
+                    <option value="">Válassz...</option>
+                    <option value="">Ipar</option>
+                    <option value="">Kereskedelem</option>
+                    <option value="">Mezőgazdaság</option>
+                </select>
+            </fieldset>
+
+            <fieldset class="text">
+                <label for="feedback">Személyes visszajelzés</label>
+                <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="Kérünk indokold meg a választásodat"></textarea>
+            </fieldset>
+            <fieldset>
+                <input type="submit" id="submit" value="Elküldés" />
+            </fieldset>
+    </form>
+</body>
+</html>

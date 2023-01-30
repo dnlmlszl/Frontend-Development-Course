@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formázás</title>
+    <style>
+
+      /* Szöveg rész játék */
+
+      .holder {
+        max-width: 800px;
+        border: 1px solid black;
+        margin: 0 auto;
+      }
+
+      .abc span {
+        background-color: gold;
+        border: 1px solid red;
+        width: 100px; /* nem érvényesül */
+        height: 100px; /* nem érvényesül */
+        display: inline;
+      }
+
+      .bca span {
+        display: inline-block;
+        background-color: gold;
+        border: 1px solid red;
+        width: 100px; 
+        height: 100px;
+      }
+
+      .cab span {
+        display: block;
+        background-color: gold;
+        border: 1px solid red;
+        width: 100px; 
+        height: 100px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="holder">
+        <div class="abc">
+            <p>
+              A <b>flexbox</b> , a <span><q>rugalmas doboz</q></span> rövidítés, a
+              CSS3-ban bevezetett <span> elrendezési mód </span>, amely
+              meghatározza, hogy az elemek hogyan helyezkednek el egy oldalon, hogy
+              kiszámíthatóan viselkedjenek a különböző képernyőméretek és
+              eszközök mellett.
+            </p>
+        </div>
+        <div class="bca">
+            <p>
+              A <b>flexbox</b> , a <span><q>rugalmas doboz</q></span> rövidítés, a
+              CSS3-ban bevezetett <span> elrendezési mód </span>, amely
+              meghatározza, hogy az elemek hogyan helyezkednek el egy oldalon, hogy
+              kiszámíthatóan viselkedjenek a különböző képernyőméretek és
+              eszközök mellett.
+            </p>
+        </div>
+        <div class="cab">
+            <p>
+              A <b>flexbox</b> , a <span><q>rugalmas doboz</q></span> rövidítés, a
+              CSS3-ban bevezetett <span> elrendezési mód </span>, amely
+              meghatározza, hogy az elemek hogyan helyezkednek el egy oldalon, hogy
+              kiszámíthatóan viselkedjenek a különböző képernyőméretek és
+              eszközök mellett.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+  </body>
+</html>

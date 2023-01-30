@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formázás</title>
+    <style>
+      .a ul,
+      .b ul {
+        padding: 0;
+      }
+
+      .a {
+        background-color: orchid;
+      }
+
+      .a li {
+        display: inline;
+        padding: 1.25em;
+        border-right: 1px solid gray;
+        width: 200px; /* nem érvényesül */
+      }
+
+      .a li a {
+        text-decoration: none;
+      }
+
+      .b {
+        background-color: aqua;
+      }
+
+      .b li {
+        display: inline-block;
+        padding: 20px;
+        border-right: 1px solid gray;
+        width: 200px;
+      }
+
+      .a li a {
+        text-decoration: none;
+      }
+
+      .c b {
+        display: block;
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <hr />
+
+    <nav class="a">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <hr />
+
+    <nav class="b">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <hr />
+
+    <div class="c">
+      <p><b>Kata: </b>Mit csinálsz ma délután?</p>
+      <p><b>Tamás: </b>Edzésre fogok menni.</p>
+    </div>
+
+    <hr />
+
+
+  </body>
+</html>
