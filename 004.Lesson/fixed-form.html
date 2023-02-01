@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4</title>
+    <style>
+        
+        .level {
+            max-width: 600px;
+            border: 1px solid black;
+            border-radius: 8px;
+            box-shadow: 0 0 12px black;
+            padding: 1em;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        #email, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 1.25em;
+            height: 1.5rem;
+            box-sizing: border-box;
+        }
+
+        #agree {
+            position: relative;
+            top: 1px;
+        }
+
+        .closex {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+        }
+
+        .qmark {
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            box-sizing: border-box;
+            padding-top: 6px;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="level">
+        <h3>Hírlevél</h3>
+        <p>Iratkozz fel hírlevelünkre és megígérjük, hogyettől kezdve soha ne zavarhassunk felesleges levélszeméttel. Haha.</p>
+        <form class="form">
+            <input type="email" name="email" id="email" placeholder="Email cím">
+            <button type="submit">Feliratkozom</button>
+            <input type="checkbox" id="agree">
+            <label for="agree">Elfogadom a feltételeket</label>
+        </form>
+        <div class="closex">x</div>
+    </div>
+
+    <div class="qmark">?</div>
+
+</body>
+</html>
