@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Frontend Tanfolyam | Órarend</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        .container1 {
+            width: 600px;
+            height: 600px;
+            margin: 1em auto;
+            box-shadow: 0 0 20px black;
+            text-align: center;
+            position: relative;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        .img1 {
+            padding-top: 3.5em;
+        }
+        
+        .img2 {
+            width: 80px;
+            position: absolute;
+            top: 300px;
+            left: 150px;
+            z-index: 1;
+            
+        }
+
+        .img2:hover {
+            animation: move 1s ease-out;
+        }
+        .img3 {
+            width: 300px;
+            position: absolute;
+            top: 150px;
+            left: 100px;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(0)
+            }
+            25% {
+                transform: translateX(15px);                
+            }
+            50% {
+                transform: translateX(30px);                
+            }
+            75% {
+                transform: translateX(15px);                
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div><a href="index.html" class="logo">Beadandó feladatok</a></div>
+            <ul class="nav-list">
+                <li class="list-item"><a href="index.html">Táblázat</a></li>
+                <li class="list-item"><a href="positions.html">Pozícionálás</a></li>
+                <li class="list-item"><a href="animation.html">Animáció</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container1">
+        <img class="img img1" src="./images/meadow.svg" alt="landscape">
+        <img class="img img2" src="./images/rubber-duck.svg" alt="birdie">
+        <img class="img img3" src="./images/lake.svg" alt="lake">
+    </main>
+        
+
+    
+</body>
+</html>
