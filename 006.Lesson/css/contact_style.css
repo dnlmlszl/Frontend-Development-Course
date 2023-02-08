@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Poppins&family=Roboto&display=swap");
+
+/* || RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Fugaz One", cursive;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+/* || GENERAL */
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 3px 5px #555;
+  padding: 10px;
+  background-color: rgba(119, 119, 119, 0.22);
+  display: flex;
+  flex-flow: row;
+}
+
+.message,
+.contact {
+  flex: 1;
+  padding: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 0.25em 0.5em;
+  box-shadow: 0 3px 4px #000;
+  border-radius: 6px;
+  background-color: papayawhip;
+  font-size: 1.2rem;
+  border: none;
+}
+
+@media screen and (max-width: 550px) {
+    .form {
+        flex-flow: column;
+    }
+}

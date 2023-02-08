@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Poppins&family=Roboto&display=swap");
+
+/* || RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+/* || VARIABLES */
+:root {
+    /* COLORS */
+    /* https://uigradients.com/#Portrait */
+    --BG-COLORA: #8e9eab;
+    --BG-COLORB: #1c1e1f;
+    --SHADOW: #333;
+    --HEADER-COLOR: #f00202;
+    --NAV-COLOR: #ffffff;
+    --MAIN-BGCOLOR: #f5f5f5;
+}
+
+/* || GENERAL */
+body {
+    max-width: 1400px;
+    margin: 0 auto;
+    box-shadow: 0 5px 7px var(--SHADOW);
+    position: relative;
+}
+
+.header, .footer {
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--SHADOW);
+}
+
+.header::before, .footer::before {
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    opacity: 0.6;
+    content: "";
+    width: 100%;
+    height:  6rem;
+    position: absolute;
+}
+
+.header::before {
+    top: 0;
+}
+
+.footer::before {
+    bottom: 0;
+}
+
+.header h1 {
+    color: var(--HEADER-COLOR);
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--HEADER-COLOR);
+    border-bottom: 1px solid var(--SHADOW);
+}
+
+.nav {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to left, var(--BG-COLORA), var(--BG-COLORB));
+    gap: 0.5rem;
+}
+
+.nav a {
+    text-decoration: none;
+    width: 150px;
+    padding: 5px 10px;
+    border: 2px solid var(--BG-COLORA);
+    text-align: center;
+    color: var(--NAV-COLOR);
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+.nav a:hover, .nav a:focus-visible {
+    background-color: var(--SHADOW);
+}
+
+.main {
+    background-color: var(--MAIN-BGCOLOR);
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.section {
+    max-width: 400px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.section img {
+    border-radius: 12px;
+}
+
+.section p {
+    text-align: center;
+}
+
+.section a {
+    text-decoration: none;
+    color: var(--BG-COLORA);
+    border: 2px solid var(--BG-COLORA);
+    border-radius: 6px;
+    padding: 5px 10px;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+}
+
+.section a:hover, .section a:focus-visible {
+    background-color: #8e9eab;
+    color: #f5f5f5;
+}
+
