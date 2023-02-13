@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Poppins&family=Roboto&display=swap");
+
+/* || RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+/* | GENERAL */
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+    border: 3px solid gray;
+    justify-content: center;
+    gap: 0.75rem;
+    flex: 1;
+}
