@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: lightslategray;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-item {
+    margin-left: 1rem;
+}
+
+.list-item a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.list-item a:hover, .logo:hover  {
+    color: rgb(77, 129, 167);
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 500px;
+    margin-top: 2em;
+}
+
+.title {
+    color: whitesmoke;
+    text-decoration: none;
+    border-bottom: 5px solid whitesmoke;
+}
+
+main {
+    margin-top: 1.5em;
+}
+
+table, tr, td, th {
+    border: 1px solid #333;
+    padding: 0.25em;
+    color: white;
+}
+tr, td, th {
+    padding: .65em;
+}
+th {
+    background-color: darkslateblue;
+}
+
+td {
+    background-color: white;
+}
+
+.IKT {
+    background-color: lightblue;
+}
+
+.WEB {
+    background-color: blue;
+}
+
+.PRA {
+    background-color: darkslategray;
+}
+
+.DIK {
+    background-color: #654321;
+}
+
+.container {
+    margin: .5em auto;
+    width: 500px;
+    height: 500px;
+    border: 10px dotted darkgray;
+    padding: 1em;
+    background-color: white;
+    border-radius: 8px;
+    text-align: right;
+    color: white;
+}
+
+.box1, .box2, .box3, .box4 {
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: .25em;
+    position: absolute;
+}
+
+.box1 {
+    background-color: blueviolet;
+    top: 105px;
+    left: 410px;
+    z-index: 4;
+}
+.box2 {
+    background-color: orange;
+    top: 125px;
+    left: 430px;
+    z-index: 3;
+}
+.box3 {
+    background-color: red;
+    top: 145px;
+    left: 450px;
+    z-index: 2;
+}
+.box4 {
+    background-color: slategray;
+    top: 165px;
+    left: 470px;
+    z-index: 1;
+}

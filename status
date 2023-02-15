@@ -1,0 +1,60 @@
+[33mcommit 640c649074d2ce6b05682d2eff54e3800736371c[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: dnlmlszl <daniel.mlaszlo@yahoo.com>
+Date:   Mon Feb 13 18:40:36 2023 +0100
+
+    practicing git commands, file upload to repo
+
+[33mcommit 436ec00bb65bedfefe6b8d7c19d6515e1baf65ea[m
+Author: László Mihály Dániel <daniel.mlaszlo@yahoo.com>
+Date:   Wed Feb 8 20:32:02 2023 +0100
+
+    commiting changes, upload repo
+
+[33mcommit de19567f943c3336be19808bc72b3552d4d21c72[m
+Author: László Mihály Dániel <daniel.mlaszlo@yahoo.com>
+Date:   Mon Feb 6 20:46:32 2023 +0100
+
+    commiting changes, upload to repo
+
+[33mcommit 316d82c72e000801352c654229a40ca50bd629f6[m
+Author: László Mihály Dániel <daniel.mlaszlo@yahoo.com>
+Date:   Thu Feb 2 20:54:59 2023 +0100
+
+    commiting changes upload home work update
+
+[33mcommit e0ce6f8bfea46495b258b09ed6d5de08b2139773[m
+Author: László Mihály Dániel <daniel.mlaszlo@yahoo.com>
+Date:   Wed Feb 1 20:41:36 2023 +0100
+
+    commiting change update repo
+
+[33mcommit 42af9aaabad36ab175021ed299439608d3b44ac4[m[33m ([m[1;32mmain[m[33m)[m
+Author: László Mihály Dániel <daniel.mlaszlo@yahoo.com>
+Date:   Mon Jan 30 20:26:27 2023 +0100
+
+    commiting changes, file upload to repo
+
+[33mcommit 2438edff8aa66105826e5e1608e944ed71dc78c0[m
+Merge: 70bea53 4d6e7c1
+Author: László Mihály Dániel <daniel.mlaszlo@yahoo.com>
+Date:   Wed Jan 25 20:45:02 2023 +0100
+
+    Merge branch 'master' of https://github.com/dnlmlszl/Frontend-Development-Course
+
+[33mcommit 70bea53ddd36077b399ea079d2a9e31637ddbb47[m
+Author: László Mihály Dániel <daniel.mlaszlo@yahoo.com>
+Date:   Wed Jan 25 20:35:35 2023 +0100
+
+    Adding files and updates to repo
+
+[33mcommit 4d6e7c10216c9796e8297964932ec148abcf4e25[m
+Author: dnlmlszl <105195574+dnlmlszl@users.noreply.github.com>
+Date:   Mon Jan 23 21:05:56 2023 +0100
+
+    Create README.md
+
+[33mcommit 175588301bb7170a9202aeb2b841288f4537dca3[m
+Author: László Mihály Dániel <daniel.mlaszlo@yahoo.com>
+Date:   Mon Jan 23 21:02:52 2023 +0100
+
+    new changes

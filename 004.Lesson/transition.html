@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .a {
+        width: 200px;
+        height: 200px;
+        background-color: darkmagenta;
+        border-radius: 12px;
+        margin: 4em;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .a:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px black;
+    }
+
+    .b {
+        width: 50px;
+        height: 50px;
+        background-color: limegreen;
+        border-radius: 8px;
+        transition: width 2s ease-in-out;
+    }
+
+    .b:hover {
+        width: 100vw;
+    }
+</style>
+<body>
+    <div class="a"></div>
+    <div class="b"></div>
+</body>
+</html>

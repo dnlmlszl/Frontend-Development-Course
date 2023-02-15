@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+  
+input,
+button,
+textarea {
+    font: inherit;
+}
+body {
+    min-height: 100vh;
+}
+
+nav ul {
+    background-color: chartreuse;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    display: block;
+    height: 30px;
+    width: 80px;
+    margin: 0 1.5rem;
+    background-color: #333;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    height: 100vh;
+    
+}    
+
+section {
+    background-color: yellow;
+    flex: 2;
+}
+
+aside {
+    background-color: red;
+    flex: 1;
+}

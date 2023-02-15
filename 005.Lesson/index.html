@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front-end Developer Course || Day05</title>
+    <style>
+        * {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+        }
+              
+        ul li:first-child {
+          font-size: 1.5rem;
+          color: blueviolet;
+        }
+
+        ul li:not(:first-child) {
+          font-size: 1.5rem;
+          font-style: italic;
+        }
+
+        /* body {
+            background-image: url(img/img1.jpg);
+            background-size: cover;
+            opacity: 0.2;
+        } */
+
+        
+        .container:before {
+            content: "";
+            background-image: url(img/img1.jpg);
+            background-size: cover;
+            opacity: 0.3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            
+          }
+          
+          .container {
+            min-height: 100vh;
+            background-image: url(img/logo.png);
+            background-repeat: no-repeat;
+            background-position: bottom;
+          }
+
+    </style>
+  </head>
+  <body>
+    <h1>Hello session!</h1>
+    <div class="container">
+        <ul class="list">
+          <li class="list-item">listaelem 1</li>
+          <li class="list-item">listaelem 2</li>
+          <li class="list-item">listaelem 3</li>
+          <li class="list-item">listaelem 4</li>
+          <li class="list-item">listaelem 5</li>
+          <li class="list-item">listaelem 6</li>
+          <li class="list-item">listaelem 7</li>
+          <li class="list-item">listaelem 8</li>
+          <li class="list-item">listaelem 9</li>
+          <li class="list-item">listaelem 10</li>
+        </ul>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
+          unde! Velit fuga, molestiae nobis nisi amet neque, provident nulla ab, non
+          assumenda ipsa possimus beatae harum optio aspernatur voluptatum rerum
+          aut. Ratione rerum sequi natus laudantium nam doloribus eum! Animi
+          reprehenderit, voluptas perspiciatis possimus quis exercitationem tenetur
+          ad necessitatibus ut?
+        </p>
+    </div>
+
+  </body>
+</html>
