@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Poppins&family=Roboto&family=Montserrat&display=swap");
+
+
+/* || RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding: 1rem;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+/* || General */
+
+body {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    color: #131313;
+}
+
+.conatiner {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.holder {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.card {
+    margin: 1em 10px;
+    background-color: lightgreen;
+    box-shadow: 5px 10px 5px grey;
+}
+
+.rounded {
+    border-radius: 50%;
+}
+
+.main__title {
+  margin: 0.5em 0;
+  font-weight: 100;
+}
+
+.section__title {
+  margin: 1.5em;
+}
+
+.newsletter {
+  border: 1px solid gray;
+  margin-top: 1.5em;
+  padding: 3em 0.5em 1em;
+  text-align: left;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1em;
+  position: relative;
+  border-radius: 6px;
+}
+
+
+.newsletter::after {
+  content: 'x';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 20px;
+  color: inherit;
+}
+
+.newsletter__form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5em;
+}
+
+.newsletter__input {
+  padding: 0.5em 0;
+}
+
+input[type="submit"] {
+  background-color: lightgreen;
+  border: none;
+  padding: 0.5em 0;
+  font-weight: bold;
+  border-radius: 6px;
+}
