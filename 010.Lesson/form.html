@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h2>Add meg kérlek a nevedet:</h2>
+    <form>
+        <input type="text" name="name" id="nameInput">
+        <button type="button" onclick="showName()">Klikk ide</button>
+        
+        <input type="checkbox" name="check" id="check" style="display: block">
+        <div id="checked"></div>
+    </form>
+    <script>
+		const showName = () => {
+			const name = document.getElementById("nameInput").value;
+			if (name) {
+				alert("Szia, " + name + "!");
+			}
+		}
+
+        const checkbox = document.getElementById("check");
+        const label = document.getElementById("checked");
+
+        checkbox.addEventListener("change", function() {
+            if (this.checked) {
+                label.innerText = "Kipipálva!";
+            } else {
+                label.innerText = "Nincs kipipálva :(";
+            }
+        });
+	</script>
+</body>
+</html>
