@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SKills</title>
+    </head>
+    <body>
+        <h1>Skillek</h1>
+        <p>Miben vagy a legjobb?</p>
+        <ol>
+            <li>Hálózati ismeretek.</li>
+            <li>A modern tesztelési módszertanok, eszközök ismerete.</li>
+            <li>
+                Mindig képben van a legújabb technológiákkal, eszközökkel,
+                folyamatosan fejleszti magát.
+            </li>
+            <li>Jó kommunikációs készség.</li>
+            <li>
+                Fejlesztői tudás: az adott projekten is használt, vagy ahhoz
+                hasonló nyelvben jártas
+            </li>
+            <li>
+                Stabil biztonsági ismeretekkel rendelkezzen üzemeltetési és
+                fejlesztési oldalon egyaránt.
+            </li>
+        </ol>
+        <button onClick="valasz()">klikkenzi bittedanke</button>
+        <script>
+            let response
+            const valasz = () => {
+                console.log('Catched');
+                response = +prompt('Sorszámot írd be')
+                if (response === 1 || response === 2 || response === 3 || response === 5) {
+                    alert('Írj valamit')
+                } else {
+                    alert('bitte danke');
+                }
+
+            }
+
+        </script>
+    </body>
+</html>
