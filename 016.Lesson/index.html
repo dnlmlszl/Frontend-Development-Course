@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Front-end Course || Javascript</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <h1>Ciklusok kezelése</h1>
+        <main class="container">
+            <div class="grid" id="root">
+                <ul></ul>
+            </div>
+            <!-- <div class="grid" id="demo">
+                <ol id="fail">
+
+                </ol>
+            </div>  
+            <div class="class" id="'demo">
+                <select name="emoji" id="emoji">
+                    
+                </select>
+            </div> -->
+        </main>
+        <h1>Feliratkozás hírlevélre</h1>
+        <form>
+            <input type="email" name="email" id="email" placeholder="email cím">
+            <input type="button" value="küldés" onclick="handleClick()">
+        </form>          
+        <script src="js/form.js"></script>
+        <script>
+            const names = []
+            const handleClick = () => {
+                let userEmail = email.value
+                // console.log(userEmail);
+                names.push(userEmail)
+                console.log(names);
+            }
+        </script>
+    </body>
+</html>

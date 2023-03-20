@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Vízhőmérséklet</title>
+</head>
+<body>
+    <div class="content">
+        <h1>Vízhőmérsékletek</h1>
+        <div class="table-container">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Napi vízhőmérséklet</th>
+                    </tr>
+                    <tr>
+                        <th>Nap</th>
+                        <th>Celsius fok</th>
+                    </tr>
+                </thead>
+                <tbody id="temp3"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Az átlagos hőmérséklet: <span></span></td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Napi vízhőmérséklet</th>
+                    </tr>
+                    <tr>
+                        <th>Nap</th>
+                        <th>Celsius fok</th>
+                    </tr>
+                </thead>
+                <tbody id="temp1"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Az átlagos hőmérséklet: <span></span></td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Napi vízhőmérséklet</th>
+                    </tr>
+                    <tr>
+                        <th>Nap</th>
+                        <th>Celsius fok</th>
+                    </tr>
+                </thead>
+                <tbody id="temp2"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Az átlagos hőmérséklet: <span></span></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <p id="a">
+            a.Volt-e olyan nap, hogy a víz hőmérséklete 26 foknál magasabb volt? Csak igen / nem válasz szükséges!(some)
+        </p>
+        <p id="b">
+            e.  Hányszor mértünk 26 Celsius fok feletti hőmérsékletet?(reduce)
+        </p>
+        <p id="c">
+            f.  Melyik volt a leghidegebb mért hőmérséklet-érték?(spread operatorral)
+        </p>
+        <p id="d">
+            g.  Hányadik napon volt a leghidegebb a víz?(spread+findIndex)
+        </p>
+
+    </div>
+
+    <script src="js/balaton.js"></script>
+    
+</body>
+</html>
