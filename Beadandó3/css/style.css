@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Poppins&family=Roboto&display=swap");
+
+/* || RESET */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+textarea {
+    font: inherit;
+}
+
+/* | General */
+body {
+    background: hsla(0, 0%, 96%, 0.886);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.btn-container {
+    display: flex;
+    width: 1200px;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    padding: 1.5rem;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.204);
+}
+
+h1 {
+    margin: 1rem;
+    text-align: left;
+}
+
+#btn-select {
+    padding: 0.25rem 0.75rem;
+    background: hsl(120, 100%, 25%);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+}
+#btn-ordered {
+    padding: 0.25rem 0.75rem;
+    background: hsl(194, 94%, 43%);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+}
+#btn-unordered {
+    padding: 0.25rem 0.75rem;
+    background: hsl(222, 81%, 58%);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+select {
+    padding: 0.25rem;
+    width: 270px;
+}
+
+ul li, ol li {
+   text-align: start;
+   margin-left: 3rem;
+}
+
+.list-container {
+    text-align: center;
+    margin: 0 auto;
+}
