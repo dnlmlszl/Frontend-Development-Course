@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tömbök || querySelector</title>
+</head>
+<body>
+    <p>bekezdés 1</p>
+    <p>bekezdés 2</p>
+    <p>bekezdés 3</p>
+    <p>bekezdés 4</p>
+    <p>bekezdés 5</p>
+    <p>bekezdés 6</p>
+    <p>bekezdés 7</p>
+    <p>bekezdés 8</p>
+    <p>bekezdés 9</p>
+    <p>bekezdés 10</p>
+
+    <script>
+        const bekezdések = []
+        const parags = document.querySelectorAll('p')
+        parags.forEach((parag) => {
+            parag.innerHTML += ` - tesztelés`
+            const pCont = parag.textContent
+            return bekezdések.push(pCont)
+        })
+        console.log(bekezdések);
+        pArray = [...bekezdések]
+        let p10 = pArray.find((obj) => obj.innerHTML.includes('10'))
+        p10.style.color = 'red'
+    </script>
+</body>
+</html>

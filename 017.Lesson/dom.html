@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            border: 1px solid grey;
+            cursor: pointer
+        }
+        .centering {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="centering" onclick="myFc1(this)">DOM objektumok</h1>
+        <h3>Alcím...</h3>
+        <form>
+            <input type="text" id="username" onblur="myFc2(this)">
+        </form>
+    </div>
+    <script>
+        const myFc1 = (objDOM) => {
+            console.log('blabla');
+            console.log(objDOM);
+            console.log(objDOM.textContent);
+            console.log(objDOM.className);
+            console.log(objDOM.tagName);
+            console.log(objDOM.parentNode);
+            console.log(objDOM.nextElementSibling);
+            console.log(objDOM.nextElementSibling.textContent);
+        }
+        const myFc2 = (objDOM) => {
+            console.log(objDOM.id);
+            console.log(objDOM.tagName, objDOM.value);
+        }
+    </script>
+</body>
+</html>

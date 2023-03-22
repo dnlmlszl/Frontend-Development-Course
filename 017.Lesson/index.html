@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="username" placeholder="add meg a felhasználó nevedet">
+        <input type="password" id="pw">
+        <input type="button" value="belépés" onclick="validate()">
+    </form>
+    <ul></ul>
+    <script>
+        const validate = () => {
+            let username = document.querySelector('#username').value
+            let pw = document.querySelector('#pw').value
+
+            if (!check(username)) 
+                 document.querySelector('ul').innerHTML += `<li>hiányzik a felhasználónév</li>`
+            if (!check(pw)) 
+                 document.querySelector('ul').innerHTML += `<li>hiányzik a jelszó</li>`
+            }
+
+        const check = () => {
+            return str?.trim() ? true : false
+        }
+    </script>
+</body>
+</html>        

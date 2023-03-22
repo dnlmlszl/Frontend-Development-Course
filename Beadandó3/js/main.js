@@ -20,7 +20,7 @@ const showList = (e) => {
 
 const buttons = document.querySelectorAll('button');
 
-// Végigmegyünk az összes gombon, és hozzáadjuk a handleButtonClick függvényt az "onclick" eseményhez
+// Végigmegyünk az összes gombon, és hozzáadjuk a showList függvényt az "onclick" eseményhez
 buttons.forEach((button) => {
   button.onclick = showList;
 });
