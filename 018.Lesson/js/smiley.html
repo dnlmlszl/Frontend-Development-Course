@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hideen {
+            display: none;
+        }
+
+        span {
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="holder">
+        <span class="happy">😋</span>
+        <span class="sad hidden">☹️</span>
+    </div>
+    <button onclick="change()">Are you happy</button>
+
+    <script>
+        const change = () => {
+            document.querySelector('.sad').classList.toggle('hidden')
+            document.querySelector('.happy').classList.toggle('hidden')
+        }
+    </script>
+</body>
+</html>
