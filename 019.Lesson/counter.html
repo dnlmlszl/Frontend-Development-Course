@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+            crossorigin="anonymous"
+        />
+        <title>Bootstrap</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <h1 class="w-100 text-center mb-3">Counter</h1>
+                <div class="col-md-2 text-center">
+                    <button
+                        id="decr"
+                        class="btn btn-info text-capitalize"
+                        onclick="setCounter(this)"
+                    >
+                        decrement
+                    </button>
+                </div>
+                <div class="col-md-2 text-center m-0 p-0">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="counter"
+                        value="10"
+                        disabled
+                    />
+                </div>
+                <div class="col-md-2 text-center">
+                    <button
+                        class="btn btn-primary text-capitalize"
+                        onclick="setCounter(this)"
+                    >
+                        increment
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            const setCounter = (domObj) => {
+                let op = domObj.innerText;
+                let counter = +document.getElementById("counter").value;
+
+                document.getElementById("counter").value =
+                    op === "Increment" ? ++counter : --counter;
+
+                counter < 1 && op === "Decrement"
+                    ? (document.getElementById("decr").disabled = true)
+                    : (document.getElementById("decr").disabled = false);
+            };
+        </script>
+    </body>
+</html>
