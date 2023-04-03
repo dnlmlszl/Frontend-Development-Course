@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    <script>
+        let ball = document.querySelector('div')
+        let x = 0
+        const move = () =>  {
+            if (x < 500) {
+                x++
+                ball.style.marginLeft = `${x}px`
+            } else {
+                clearInterval(timer)
+            }
+        }
+        let timer = setInterval(move, 10)
+        
+    </script>
+</body>
+</html>

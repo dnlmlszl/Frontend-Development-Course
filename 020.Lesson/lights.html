@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+            crossorigin="anonymous"
+        />
+        <title>Bootstrap vol II</title>
+        <style>
+            .container {
+                max-width: 300px;
+            }
+            svg {
+                height: 320px;
+                width: 140px;
+                border: 3px solid black;
+            }
+            .blink {
+                animation: blink 1s ease-out infinite;
+            }
+
+            @keyframes blink {
+                0% {fill: gray}
+                100% {fill: yellow}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container border text-center">
+            <h2 class="my-3 text-light">Jelzőlámpa</h2>
+            <svg class="bg-dark">
+                <rect
+                    x="20"
+                    y="20"
+                    fill="blue"
+                    width="100"
+                    height="280"
+                    stroke="black"
+                    stroke-width="1"
+                />
+                <circle
+                    class="red"
+                    r="30"
+                    cx="70"
+                    cy="80"
+                    fill="gray"
+                    stroke="black"
+                    stroke-width="2"
+                />
+                <circle
+                    class="yellow"
+                    r="30"
+                    cx="70"
+                    cy="160"
+                    fill="gray"
+                    stroke="black"
+                    stroke-width="2"
+                />
+                <circle
+                    class="green"
+                    r="30"
+                    cx="70"
+                    cy="240"
+                    fill="gray"
+                    stroke="black"
+                    stroke-width="2"
+                />
+            </svg>
+            <div class="container my-3" onclick="switcher(event)">
+                <button class="btn stop btn-warning">Stop</button>
+                <button class="btn start btn-success">Start</button>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            let timer
+            const switcher = (e) => {
+                // console.log(e.target.classList.value)
+
+                
+                if (e.target.classList.contains("btn-warning")) {
+                    clearTimeout(timer)
+                    document.querySelector(".start").disabled = false;
+                    document.querySelector(".yellow").classList.add('blink')
+                    document.querySelector(".red").style.fill = "gray";
+                    document.querySelector(".green").style.fill = "gray";
+                }
+                if (e.target.classList.contains("btn-success")) {
+                    document.querySelector(".yellow").classList.remove('blink')
+                    cycle()
+                }
+
+            };
+            
+            const state = [
+                { color: 'red', duration: 2000},
+                { color: 'yellow', duration: 1000},
+                { color: 'green', duration: 3000}
+            ]
+            let index = 0
+
+            function cycle() {
+                document.querySelector(".start").disabled = true;
+                init()
+                const currentState = state[index]
+                document.querySelector(`.${currentState.color}`).style.fill = currentState.color
+                index = (index + 1)%state.length
+                timer = setTimeout(cycle, currentState.duration)
+            }
+
+            function init() {
+                state.forEach(obj => document.querySelector(`.${obj.color}`).style.fill = 'gray')
+            }
+        </script>
+    </body>
+</html>
