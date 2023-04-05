@@ -71,3 +71,13 @@ svg {
     font-size: 3rem;
     font-weight: 700;
 }
+
+.btn {
+    padding: 0.31rem 0.62rem;
+    background-color: rgba(41, 130, 185, 0.50);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}

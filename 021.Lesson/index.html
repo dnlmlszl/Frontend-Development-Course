@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+            crossorigin="anonymous"
+        />
+
+        <title>Hol a zsuga</title>
+        <style>
+            input {
+                max-width: 10%;
+            }
+            .container {
+                height: 90vh;
+            }
+            .box {
+                width: 50px;
+                height: 50px;
+                border: 1px solid #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container text-center">
+            <h4 class="text-center my-4">Hol a zsuga?</h4>
+            <form class="form">
+                <div class="form-group">
+                    <label for="size" class="mb-3">Add the size of the square grid</label>
+                    <input
+                        type="number"
+                        id="size"
+                        class="form-control my-4 mx-auto"
+                        min="3"
+                        max="10"
+                        value="5"
+                    />
+                </div>
+                <button class="btn btn-primary mr-3" onclick="draw(event)">
+                    Start
+                </button>
+                <button class="btn btn-secondary">New game</button>
+            </form>
+            <div class="row justify-content-center">
+                <table id="grid" onclick="position(event)"></table>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+
+            let randX
+            let randY
+
+            const randNumb = (numb) => Math.floor(Math.random() * numb);
+            const deleteNum = () => document.getElementById('grid').innerHTML = '';
+
+            const draw = (e) => {
+                e.preventDefault()
+                let n = +document.getElementById('size').value
+                deleteNum()
+                if (n > 2 && n <= 10) {
+                    randX = randNumb(n)
+                    randY = randNumb(n)
+
+                    for (let i = 0; i < n; i++) {
+                        let row = document.getElementById('grid').insertRow(-1)
+                        for (let j = 0; j < n; j++) {
+                            let cell = row.insertCell(-1)
+                            cell.classList.add('box')
+                            cell.classList.add('bg-secondary')
+                            document.querySelector('.btn-primary').disabled = true
+                        }
+                    }
+                }
+            }
+
+            const position = (e) => {
+                let x = e.target.cellIndex
+                let y = e.target.parentNode.rowIndex
+                if (e.target.tagName == 'TD') {
+                    //console.log(x, y);
+                };
+                x === randX && y === randY ? e.target.classList.add('bg-danger') : e.target.classList.add('bg-dark')
+            }
+        </script>
+    </body>
+</html>

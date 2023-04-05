@@ -1,4 +1,3 @@
-
 const words2 = [
     "alma",
     "programozás",
@@ -547,6 +546,33 @@ const abc = [
     "Z",
 ];
 
+
+class HangmanGame {
+    constructor(word, maxGuesses) {
+        this.letters = word.toUpperCase().split('')
+        this.wordStatus = word.split('').map((char) => '_')
+        this.maxGuesses = maxGuesses
+        this.errors = 0
+    }
+
+    isGameOver() {
+        return this.errors >= this.maxGuesses || this.wordStatus.join('') === this.letters.join('')
+    }
+
+    guessLetter(letter) {
+        if (this.isGameOver()) return 
+        if (this.wordStatus.includes(letter)) return
+        let match = false
+        for (let i in this.letters) {
+            if (this.letters[i] === letter) {
+                this.wordStatus[i] = letter
+                match = true
+            }
+        }
+        this.errors = match ? this.errors : ++this.errors
+    }
+}
+
 document.querySelector(".letters-holder").innerHTML = abc
     .map((char) => {
         return `<span>${char}</span>`;
@@ -556,7 +582,7 @@ document.querySelector(".letters-holder").innerHTML = abc
 const randomWord = (arr) => {
     const randomIndex = Math.floor(Math.random() * arr.length);
     return arr[randomIndex];
-};
+};  
 
 const showWordStatus = (arr, className) => {
     document.querySelector(className).innerHTML = arr.map((item) => {
@@ -564,74 +590,28 @@ const showWordStatus = (arr, className) => {
     }).join('')
 }
 
-let secretWord = randomWord(words2);
-let letters = secretWord.split('')
-let wordStatus = letters.map((item) => {
-    return '_'
-})
-let errors = 0
-console.log(wordStatus);
+let game = new HangmanGame(randomWord(words2), 6)
 
-showWordStatus(wordStatus, '.secret-word')
+showWordStatus(game.wordStatus, '.secret-word')
 
 const handleClick = (e) => {
-    if (e.target.tagName === "SPAN") {
+   if (e.target.tagName === 'SPAN' && !game.isGameOver()) {
         let clickedLetter = e.target.innerText
-        let match = false
-        for (let i in letters) {
-            if (letters[i].toUpperCase() === clickedLetter) {
-                wordStatus[i] = clickedLetter
-                match = true
-            }
-        }
-        showWordStatus(wordStatus, '.secret-word')
-        errors = match ? errors : ++errors
-        if (errors > 0 && errors <= 6) {
-            document.getElementById(errors).style.display = 'block'
+        game.guessLetter(clickedLetter)
+        showWordStatus(game.wordStatus, '.secret-word')
+        if (game.isGameOver()) {
+            document.querySelector('.msg').innerHTML = game.errors < game.maxGuesses ? `<h3>You Win!</h3>` : `<h3>You Lose!</h3>`
             return
         }
-        if (errors === 6) {
-            document.querySelector('.msg').innerHTML = '<h3>GAME OVER...</h3>'
-            return
+        if (game.errors > 0) {
+            document.getElementById(game.errors).style.display = 'block'
         }
-        if (wordStatus.indexOf('_') === -1) {
-            document.querySelector('.msg').innerHTML = '<h3>You win!</h3>'
-            return
-        }
-    };
+   } 
 }
 
-// const wordIsGuessed = () => {
-//     return wordStatus.indexOf('_') === -1
-// }
-
-// const stopGame = (msg) => {
-//     document.querySelector('.msg').innerHTML = msg
-//     document.querySelectorAll('.hangman').forEach((el) => {
-//         el.style.display = 'block'
-//     })
-//     document.querySelector('.letters-holder').removeEventListener('click', handleClick)
-// }
-
-// const handleClick = (e) => {
-//     if (e.target.tagName === "SPAN") {
-//         let clickedLetter = e.target.innerText
-//         let match = false
-//         for (let i in letters) {
-//             if (letters[i].toUpperCase() === clickedLetter) {
-//                 wordStatus[i] = clickedLetter
-//                 match = true
-//             }
-//         }
-//         showWordStatus(wordStatus, '.secret-word')
-//         errors = match ? errors : ++errors
-//         if (errors === 6) {
-//             stopGame('<h3>GAME OVER...</h3><p>The secret word was: ' + secretWord + '</p>')
-//         }
-//         if (wordIsGuessed()) {
-//             stopGame('<h3>You win!</h3><p>The secret word was: ' + secretWord + '</p>')
-//         }
-//     };
-// }
-// document.querySelector('.letters-holder').addEventListener('click', handleClick)
-
+const newGame = () => {
+    game = new HangmanGame(randomWord(words2), 6)
+    document.querySelectorAll('.figure').forEach((obj) => obj.style.display = 'none')
+    showWordStatus(game.wordStatus, '.secret-word')
+    document.querySelector('.msg').innerHTML = ''
+}
